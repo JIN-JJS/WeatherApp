@@ -21,7 +21,7 @@ struct ContentView: View {
                 Label(weatherKitManager.temp, systemImage: weatherKitManager.symbol)
             }
             .task {
-                await weatherKitManager.getWeather(latitude: locationManager.latitude, longitude: locationManager.longitude)
+                 weatherKitManager.getWeather(latitude: locationManager.latitude, longitude: locationManager.longitude)
             }
             
         } else {

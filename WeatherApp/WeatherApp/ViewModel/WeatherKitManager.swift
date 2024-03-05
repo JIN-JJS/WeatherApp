@@ -14,7 +14,7 @@ import WeatherKit
         
         
     func getWeather(latitude: Double, longitude: Double) {
-            async {
+            Task {
                 do {
                     weather = try await Task.detached(priority: .userInitiated) {
                         return try await WeatherService.shared.weather(for: .init(latitude: latitude, longitude: longitude))  // Coordinates for Apple Park just as example coordinates
