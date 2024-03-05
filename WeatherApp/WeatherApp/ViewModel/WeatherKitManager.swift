@@ -9,4 +9,32 @@ import Foundation
 import WeatherKit
 
 @MainActor class WeatherKitManager: ObservableObject {
+    
+    @Published var weather: Weather?
+        
+        
+        func getWeather() {
+            async {
+                do {
+                    weather = try await Task.detached(priority: .userInitiated) {
+                        return try await WeatherService.shared.weather(for: .init(latitude: 37.596970, longitude: -127.036119))  // Coordinates for Apple Park just as example coordinates
+                    }.value
+                } catch {
+                  fatalError("\(error)")
+                }
+            }
+       
+        }
+        
+        var symbol: String {
+            weather?.currentWeather.symbolName ?? "xmark"
+        }
+        
+        var temp: String {
+            let temp = weather?.currentWeather.temperature
+            let convertedTemp = temp?.converted(to: .celsius).description
+            return convertedTemp ?? "Loading Weather Data"
+            
+        }
+    
 }
