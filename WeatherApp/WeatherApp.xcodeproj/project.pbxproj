@@ -12,6 +12,7 @@
 		C053384B2B971606006B8361 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C053384A2B971606006B8361 /* Assets.xcassets */; };
 		C053384E2B971606006B8361 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C053384D2B971606006B8361 /* Preview Assets.xcassets */; };
 		C05338582B972961006B8361 /* WeatherKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05338572B972961006B8361 /* WeatherKitManager.swift */; };
+		C05338652B9740C1006B8361 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05338642B9740C1006B8361 /* LocationManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		C053384D2B971606006B8361 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C05338572B972961006B8361 /* WeatherKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherKitManager.swift; sourceTree = "<group>"; };
 		C05338632B973E3C006B8361 /* WeatherApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WeatherApp.entitlements; sourceTree = "<group>"; };
+		C05338642B9740C1006B8361 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				C05338572B972961006B8361 /* WeatherKitManager.swift */,
+				C05338642B9740C1006B8361 /* LocationManager.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -150,6 +153,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C05338652B9740C1006B8361 /* LocationManager.swift in Sources */,
 				C05338492B971604006B8361 /* ContentView.swift in Sources */,
 				C05338472B971604006B8361 /* WeatherAppApp.swift in Sources */,
 				C05338582B972961006B8361 /* WeatherKitManager.swift in Sources */,
@@ -290,6 +294,7 @@
 				DEVELOPMENT_TEAM = JY747KU2DH;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "To get Weather for your location";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -320,6 +325,7 @@
 				DEVELOPMENT_TEAM = JY747KU2DH;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "To get Weather for your location";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

@@ -13,11 +13,11 @@ import WeatherKit
     @Published var weather: Weather?
         
         
-        func getWeather() {
+    func getWeather(latitude: Double, longitude: Double) {
             async {
                 do {
                     weather = try await Task.detached(priority: .userInitiated) {
-                        return try await WeatherService.shared.weather(for: .init(latitude: 37.596970, longitude: -127.036119))  // Coordinates for Apple Park just as example coordinates
+                        return try await WeatherService.shared.weather(for: .init(latitude: latitude, longitude: longitude))  // Coordinates for Apple Park just as example coordinates
                     }.value
                 } catch {
                   fatalError("\(error)")
